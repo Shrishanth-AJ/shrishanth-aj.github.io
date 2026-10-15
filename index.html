@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrishanth A J | AI/ML Engineer & Automation Developer</title>
+    <title>Shrishanth A J | AI/ML & Automation Developer</title>
+    <meta name="description" content="Shrishanth A J, 1st-year B.Tech CSE (AI & ML) student at S-VYASA, Bengaluru. Building local AI assistants, Python automation pipelines, and hackathon prototypes.">
+    <meta name="theme-color" content="#020617">
+    <link rel="canonical" href="https://shrishanth-aj.github.io/">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shrishanth A J | AI/ML & Automation Developer">
+    <meta property="og:description" content="Local AI assistants, Python automation, and hackathon prototypes. B.Tech CSE (AI & ML) at S-VYASA.">
+    <meta property="og:url" content="https://shrishanth-aj.github.io/">
+    <meta name="twitter:card" content="summary">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script>
@@ -17,15 +29,22 @@
             }
         }
     </script>
+    <style>
+        html { scroll-padding-top: 5rem; }
+        :focus-visible { outline: 2px solid #818cf8; outline-offset: 2px; border-radius: 6px; }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+        }
+    </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
 
     <!-- Navbar -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80">
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80" aria-label="Main">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <span class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+            <a href="#about" class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
                 Shrishanth.dev
-            </span>
+            </a>
             <div class="space-x-8 text-sm font-medium text-slate-400 hidden md:flex">
                 <a href="#about" class="hover:text-indigo-400 transition">About</a>
                 <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
@@ -36,18 +55,30 @@
                 <a href="Shrishanth_AJ_Resume.pdf" download class="px-4 py-2 text-xs md:text-sm rounded-lg border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-200 font-medium transition flex items-center gap-2">
                     <i class="fa-regular fa-file-pdf text-red-400"></i> Resume
                 </a>
-                <a href="mailto:shrishanth1807@gmail.com" class="px-4 py-2 text-xs md:text-sm rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-medium transition shadow-lg shadow-indigo-500/20">
+                <a href="#contact" class="hidden sm:inline-block px-4 py-2 text-xs md:text-sm rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-medium transition shadow-lg shadow-indigo-500/20">
                     Get in Touch
                 </a>
+                <button id="menuBtn" type="button" class="md:hidden w-10 h-10 rounded-lg border border-slate-700 bg-slate-900/60 text-slate-200 flex items-center justify-center" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-800/80 bg-slate-950/95">
+            <div class="max-w-6xl mx-auto px-6 py-3 flex flex-col text-sm font-medium text-slate-300">
+                <a href="#about" class="py-3 hover:text-indigo-400">About</a>
+                <a href="#projects" class="py-3 hover:text-indigo-400">Projects</a>
+                <a href="#skills" class="py-3 hover:text-indigo-400">Skills</a>
+                <a href="#contact" class="py-3 hover:text-indigo-400">Contact</a>
             </div>
         </div>
     </nav>
 
+    <main>
     <!-- Hero Section -->
     <section id="about" class="max-w-6xl mx-auto px-6 pt-20 pb-16">
         <div class="flex flex-col md:flex-row items-center justify-between gap-12">
             <div class="flex-1 space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-400 text-xs font-semibold">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-xs font-semibold">
                     <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                     CSE (AI & ML) • S-VYASA Deemed to be University, Bangalore
                 </div>
@@ -55,7 +86,7 @@
                     Hi, I'm <span class="bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">Shrishanth A J</span>
                 </h1>
                 <p class="text-slate-400 text-lg leading-relaxed max-w-xl">
-                    1st-year Computer Science Engineering student passionate about building autonomous AI systems, Python automation pipelines, and scalable digital infrastructure.
+                    1st-year Computer Science Engineering student building local AI assistants, Python automation pipelines, and hackathon prototypes.
                 </p>
                 <div class="flex flex-wrap gap-4 pt-2">
                     <a href="#projects" class="px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold shadow-lg shadow-indigo-600/30 transition">
@@ -66,16 +97,16 @@
                     </a>
                 </div>
                 <div class="flex items-center gap-6 text-slate-400 text-xl pt-3">
-                    <a href="https://linkedin.com" target="_blank" class="hover:text-indigo-400 transition"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com" target="_blank" class="hover:text-indigo-400 transition"><i class="fab fa-github"></i></a>
-                    <a href="mailto:shrishanth1807@gmail.com" class="hover:text-indigo-400 transition"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/shrishanth-aj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-indigo-400 transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Shrishanth-AJ" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="hover:text-indigo-400 transition"><i class="fab fa-github"></i></a>
+                    <a href="mailto:shrishanth1807@gmail.com" aria-label="Email" class="hover:text-indigo-400 transition"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
-            
+
             <!-- Quick Stats Card -->
             <div class="w-full md:w-80 p-6 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 shadow-2xl relative">
                 <div class="absolute -top-3 -right-3 w-20 h-20 bg-indigo-500/10 blur-2xl rounded-full"></div>
-                <h3 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-4">Highlights</h3>
+                <h2 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-4">Highlights</h2>
                 <div class="space-y-4">
                     <div class="p-3 rounded-xl bg-slate-800/40 border border-slate-700/50 flex items-center justify-between">
                         <span class="text-slate-400 text-sm">Key Project</span>
@@ -83,7 +114,7 @@
                     </div>
                     <div class="p-3 rounded-xl bg-slate-800/40 border border-slate-700/50 flex items-center justify-between">
                         <span class="text-slate-400 text-sm">Hackathon</span>
-                        <span class="font-bold text-emerald-400">InnovateX 2026</span>
+                        <span class="font-bold text-emerald-400">InnovateX 2026 (first)</span>
                     </div>
                     <div class="p-3 rounded-xl bg-slate-800/40 border border-slate-700/50 flex items-center justify-between">
                         <span class="text-slate-400 text-sm">Athletics</span>
@@ -98,50 +129,80 @@
     <section id="projects" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-900">
         <div class="mb-10">
             <h2 class="text-3xl font-bold">Featured Projects</h2>
-            <p class="text-slate-400 text-sm mt-1">Autonomous software, hardware innovation, and automation pipelines.</p>
+            <p class="text-slate-400 text-sm mt-1">Local AI, hackathon prototypes, and automation pipelines.</p>
         </div>
         <div class="grid md:grid-cols-2 gap-8">
-            
-            <!-- Project 1: Ultron -->
-            <div class="group rounded-2xl bg-slate-900/40 border border-slate-800 p-6 hover:border-indigo-500/50 transition space-y-4">
-                <div class="flex items-start justify-between">
-                    <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">Project ULTRON — Autonomous AI Assistant</h3>
-                    <span class="px-2.5 py-0.5 rounded text-xs bg-indigo-500/20 text-indigo-300 font-medium">In Development</span>
+
+            <!-- Project 1: ULTRON (featured, full width) -->
+            <div class="group md:col-span-2 rounded-2xl bg-slate-900/40 border border-slate-800 p-6 hover:border-indigo-500/50 transition space-y-4">
+                <div class="flex items-start justify-between gap-4">
+                    <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">Project ULTRON: Local Voice-Controlled AI Assistant</h3>
+                    <span class="shrink-0 px-2.5 py-0.5 rounded text-xs bg-indigo-500/20 text-indigo-300 font-medium">In Development</span>
                 </div>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Personal self-assistant engineered to automate multi-step digital workflows, query resolution, and daily task scheduling using natural language processing and LLM APIs.
+                <p class="text-slate-400 text-sm leading-relaxed max-w-3xl">
+                    A JARVIS-style assistant that runs entirely on my own laptop with no paid APIs. Say "Hey Ultron" and it listens, answers out loud, and controls my laptop and phone.
                 </p>
+                <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-sm text-slate-300 pt-1">
+                    <li class="flex gap-2"><i class="fas fa-microphone text-indigo-400 mt-1"></i> Wake word, local speech-to-text, and a spoken voice</li>
+                    <li class="flex gap-2"><i class="fas fa-laptop text-indigo-400 mt-1"></i> Laptop control: apps, volume, lock, screenshots, system status</li>
+                    <li class="flex gap-2"><i class="fas fa-mobile-screen text-indigo-400 mt-1"></i> Android control over ADB</li>
+                    <li class="flex gap-2"><i class="fas fa-hand text-indigo-400 mt-1"></i> Hand-gesture control with MediaPipe</li>
+                    <li class="flex gap-2"><i class="fas fa-list-check text-indigo-400 mt-1"></i> Background job queue with voice approval</li>
+                    <li class="flex gap-2"><i class="fas fa-trophy text-indigo-400 mt-1"></i> One sentence builds a hackathon deck, script, and demo site</li>
+                </ul>
                 <div class="flex flex-wrap gap-2 pt-2">
                     <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-indigo-300 font-mono">Python</span>
-                    <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-indigo-300 font-mono">LLM APIs</span>
-                    <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-indigo-300 font-mono">Automation</span>
+                    <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-indigo-300 font-mono">Ollama</span>
+                    <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-indigo-300 font-mono">faster-whisper</span>
+                    <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-indigo-300 font-mono">FastAPI</span>
+                    <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-indigo-300 font-mono">WebSockets</span>
+                    <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-indigo-300 font-mono">MediaPipe</span>
+                    <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-indigo-300 font-mono">ADB</span>
                 </div>
+                <!-- TODO: once the repo exists, add a link, e.g.
+                <a href="https://github.com/Shrishanth-AJ/ULTRON" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-indigo-400 hover:text-indigo-300"><i class="fab fa-github"></i> View code</a>
+                Also add a screenshot or a short demo video of the dashboard here. -->
             </div>
 
-            <!-- Project 2: Thermo-Shield -->
-            <div class="group rounded-2xl bg-slate-900/40 border border-slate-800 p-6 hover:border-emerald-500/50 transition space-y-4">
-                <div class="flex items-start justify-between">
-                    <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition">THERMO-SHIELD — Solar Defense Habitat</h3>
-                    <span class="px-2.5 py-0.5 rounded text-xs bg-emerald-500/20 text-emerald-300 font-medium">InnovateX '26</span>
-                </div>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Modular, zero-fuel solar thermal shelter concept engineered for high-altitude defense outposts (Ladakh). Utilizes Phase Change Materials (PCM) and aerogel insulation architecture.
-                </p>
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-emerald-300 font-mono">Systems Design</span>
-                    <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-emerald-300 font-mono">Clean Energy</span>
-                    <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-emerald-300 font-mono">Defense Tech</span>
+            <!-- Project 2: Thermo-Shield (featured, with poster) -->
+            <div class="group md:col-span-2 rounded-2xl bg-slate-900/40 border border-slate-800 p-6 hover:border-emerald-500/50 transition">
+                <div class="grid md:grid-cols-5 gap-6 items-center">
+                    <a href="thermo-shield-poster.jpg" target="_blank" rel="noopener noreferrer" class="md:col-span-2 block overflow-hidden rounded-xl border border-slate-800" aria-label="Open the THERMO-SHIELD concept poster in full size">
+                        <img src="thermo-shield-poster.jpg" alt="THERMO-SHIELD concept poster: a solar-powered portable thermal shelter for high-altitude outposts, with specifications, exploded view of its layers, and how it works" width="1312" height="1199" loading="lazy" class="w-full h-full object-cover hover:scale-[1.02] transition duration-300">
+                    </a>
+                    <div class="md:col-span-3 space-y-4">
+                        <div class="flex items-start justify-between gap-4">
+                            <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition">THERMO-SHIELD: Solar Defense Habitat</h3>
+                            <span class="shrink-0 px-2.5 py-0.5 rounded text-xs bg-emerald-500/20 text-emerald-300 font-medium">InnovateX '26</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            My team's first hackathon. We co-designed a portable, zero-fuel thermal shelter concept for DRDO problem statement 26051, aimed at soldiers at high-altitude posts such as Ladakh. It captures solar energy by day, stores the heat in a Phase Change Material (PCM) layer, and releases it at night, with aerogel and PUF insulation keeping it in.
+                        </p>
+                        <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-slate-300">
+                            <li class="flex gap-2"><i class="fas fa-temperature-half text-emerald-400 mt-1"></i> Design target: 16–20 °C inside at −30 °C outside</li>
+                            <li class="flex gap-2"><i class="fas fa-users text-emerald-400 mt-1"></i> Sleeps 2–4 people per module</li>
+                            <li class="flex gap-2"><i class="fas fa-suitcase text-emerald-400 mt-1"></i> Packs into a 120 × 60 × 40 cm bag, about 45–60 kg</li>
+                            <li class="flex gap-2"><i class="fas fa-stopwatch text-emerald-400 mt-1"></i> Set up in under 15 minutes</li>
+                        </ul>
+                        <p class="text-xs text-slate-500">A concept design with target specifications. The poster images are concept renders, not photos of a built prototype.</p>
+                        <div class="flex flex-wrap gap-2 pt-1">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-emerald-300 font-mono">Systems Design</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-emerald-300 font-mono">Clean Energy</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-emerald-300 font-mono">PCM Thermal Storage</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-emerald-300 font-mono">Defense Tech</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Project 3: Web Scraper -->
             <div class="group rounded-2xl bg-slate-900/40 border border-slate-800 p-6 hover:border-cyan-500/50 transition space-y-4">
-                <div class="flex items-start justify-between">
+                <div class="flex items-start justify-between gap-4">
                     <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition">Automated Directory & Lead Scraper</h3>
-                    <span class="px-2.5 py-0.5 rounded text-xs bg-cyan-500/20 text-cyan-300 font-medium">Freelance Engine</span>
+                    <span class="shrink-0 px-2.5 py-0.5 rounded text-xs bg-cyan-500/20 text-cyan-300 font-medium">2026</span>
                 </div>
                 <p class="text-slate-400 text-sm leading-relaxed">
-                    Custom multi-page web scraping engine that extracts structured business listings into clean CSV and Excel reports with automated deduplication and rate limiting.
+                    Multi-page web scraper that turns business listings into clean CSV and Excel reports, with request throttling, retries, and automatic deduplication.
                 </p>
                 <div class="flex flex-wrap gap-2 pt-2">
                     <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-cyan-300 font-mono">Python</span>
@@ -152,15 +213,15 @@
 
             <!-- Project 4: Discord Bot -->
             <div class="group rounded-2xl bg-slate-900/40 border border-slate-800 p-6 hover:border-purple-500/50 transition space-y-4">
-                <div class="flex items-start justify-between">
+                <div class="flex items-start justify-between gap-4">
                     <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition">Discord Community Infrastructure & Bots</h3>
-                    <span class="px-2.5 py-0.5 rounded text-xs bg-purple-500/20 text-purple-300 font-medium">Automation</span>
+                    <span class="shrink-0 px-2.5 py-0.5 rounded text-xs bg-purple-500/20 text-purple-300 font-medium">2025 – 2026</span>
                 </div>
                 <p class="text-slate-400 text-sm leading-relaxed">
-                    End-to-end community server setup with custom bot automation, role hierarchies, event webhook triggers, and automated moderation pipelines.
+                    Set up community servers with custom bots, role hierarchies and permission matrices, automated onboarding, event notifications, and real-time moderation.
                 </p>
                 <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-purple-300 font-mono">Discord API</span>
+                    <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-purple-300 font-mono">discord.py</span>
                     <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-purple-300 font-mono">Webhooks</span>
                     <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-purple-300 font-mono">Bot Workflows</span>
                 </div>
@@ -172,31 +233,74 @@
     <!-- Skills Section -->
     <section id="skills" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-900">
         <h2 class="text-2xl font-bold mb-8">Technical Expertise</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 transition">
-                <div class="text-indigo-400 mb-2 font-semibold">Languages</div>
-                <p class="text-slate-400 text-sm leading-relaxed">Python, C, C++, SQL, JavaScript</p>
+                <h3 class="text-indigo-400 mb-2 font-semibold">Languages</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Python, C, C++, SQL, JavaScript (basics)</p>
             </div>
             <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 transition">
-                <div class="text-indigo-400 mb-2 font-semibold">AI & Automation</div>
-                <p class="text-slate-400 text-sm leading-relaxed">BeautifulSoup, Pandas, LLM Prompting, Discord Bots</p>
+                <h3 class="text-indigo-400 mb-2 font-semibold">AI & Automation</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">LLM prompting, Ollama (local LLMs), faster-whisper, MediaPipe, discord.py</p>
             </div>
             <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 transition">
-                <div class="text-indigo-400 mb-2 font-semibold">Tools</div>
-                <p class="text-slate-400 text-sm leading-relaxed">Git, GitHub, Linux, VS Code, Google Sheets</p>
+                <h3 class="text-indigo-400 mb-2 font-semibold">Backend & Data</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">FastAPI, WebSockets, SQLite, Pandas, BeautifulSoup, Requests</p>
             </div>
             <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 transition">
-                <div class="text-indigo-400 mb-2 font-semibold">Leadership</div>
-                <p class="text-slate-400 text-sm leading-relaxed">Rapid Prototyping, Event Execution, Basketball Athlete</p>
+                <h3 class="text-indigo-400 mb-2 font-semibold">Tools</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Git, GitHub, Linux, VS Code, ADB, Google Sheets</p>
+            </div>
+            <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 transition">
+                <h3 class="text-indigo-400 mb-2 font-semibold">Leadership</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Rapid prototyping, event management, team leadership, basketball</p>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-900">
+        <h2 class="text-2xl font-bold">Contact</h2>
+        <p class="text-slate-400 mt-2 max-w-xl leading-relaxed">
+            I'm looking for internships, hackathon teams, and collaborations. Email is the fastest way to reach me.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-6">
+            <a href="mailto:shrishanth1807@gmail.com" class="px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold shadow-lg shadow-indigo-600/30 transition flex items-center gap-2">
+                <i class="fas fa-envelope"></i> shrishanth1807@gmail.com
+            </a>
+            <a href="https://github.com/Shrishanth-AJ" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-lg border border-slate-700 bg-slate-900/50 hover:bg-slate-800 font-semibold transition flex items-center gap-2">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/shrishanth-aj/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-lg border border-slate-700 bg-slate-900/50 hover:bg-slate-800 font-semibold transition flex items-center gap-2">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="Shrishanth_AJ_Resume.pdf" download class="px-6 py-3 rounded-lg border border-slate-700 bg-slate-900/50 hover:bg-slate-800 font-semibold transition flex items-center gap-2">
+                <i class="fa-regular fa-file-pdf"></i> Resume
+            </a>
+        </div>
+    </section>
+    </main>
+
     <!-- Footer -->
-    <footer id="contact" class="max-w-6xl mx-auto px-6 py-12 border-t border-slate-900 text-center text-slate-500 text-sm">
+    <footer class="max-w-6xl mx-auto px-6 py-10 border-t border-slate-900 text-center text-slate-400 text-sm">
         <p class="mb-2">Designed and built by Shrishanth A J • B.Tech CSE (AI & ML) @ S-VYASA</p>
-        <p class="text-slate-600">&copy; 2026 Shrishanth A J. All rights reserved.</p>
+        <p>&copy; 2026 Shrishanth A J. All rights reserved.</p>
     </footer>
 
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('hidden') === false;
+            menuBtn.setAttribute('aria-expanded', String(isOpen));
+            menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                menuBtn.setAttribute('aria-label', 'Open menu');
+            });
+        });
+    </script>
 </body>
 </html>
